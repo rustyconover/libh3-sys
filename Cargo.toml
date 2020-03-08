@@ -8,8 +8,12 @@ links = "h3"
 repository = "https://github.com/rustyconover/libh3-sys.git"
 build = "build.rs"
 edition = "2018"
+exclude = [
+    "generate"
+]
 [dependencies]
 libc = "0.2"
 [build-dependencies]
 cc = { version = "1.0", features = ["parallel"] }
 pkg-config = "0.3"
+
