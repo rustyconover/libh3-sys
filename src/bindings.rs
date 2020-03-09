@@ -2,6 +2,7 @@
 
 #[doc = " @brief the H3Index fits within a 64-bit unsigned integer"]
 pub type H3Index = u64;
+
 #[doc = " @struct GeoCoord"]
 #[doc = "@brief latitude/longitude in radians"]
 #[repr(C)]
@@ -94,7 +95,7 @@ fn bindgen_test_layout_GeoBoundary() {
 #[derive(Debug, Copy, Clone)]
 pub struct Geofence {
     pub numVerts: ::std::os::raw::c_int,
-    pub verts: *mut GeoCoord,
+    pub verts: *const GeoCoord,
 }
 #[test]
 fn bindgen_test_layout_Geofence() {
@@ -139,7 +140,7 @@ pub struct GeoPolygon {
     #[doc = "< number of elements in the array pointed to by holes"]
     pub numHoles: ::std::os::raw::c_int,
     #[doc = "< interior boundaries (holes) in the polygon"]
-    pub holes: *mut Geofence,
+    pub holes: *const Geofence,
 }
 #[test]
 fn bindgen_test_layout_GeoPolygon() {

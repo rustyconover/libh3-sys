@@ -1,6 +1,6 @@
 [package]
 name = "libh3-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Rusty Conover (rusty@conover.me)"]
 description = "Bindings to Uber's Hexagonal Hierarchical Spatial Index - H3"
 license = "MIT"
